@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 app.secret_key = 'hello_world'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:phu28240@127.0.0.1:5432/pythonlogin'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://webadmin:APIsgk43364@node4994-pp-gold.th.app.ruk-com.cloud:5432/pythonlogin'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -226,9 +226,9 @@ def login():
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
-        connection = psycopg2.connect(user="postgres",
-                                    password="phu28240",
-                                    host="127.0.0.1",
+        connection = psycopg2.connect(user="webadmin",
+                                    password="APIsgk43364",
+                                    host="node4994-pp-gold.th.app.ruk-com.cloud",
                                     port="5432",
                                     database="pythonlogin")
         cursor = connection.cursor()
@@ -271,9 +271,9 @@ def register():
         password = request.form['password']
         confirm_password = request.form['confirm_password']
         email = request.form['email']
-        connection = psycopg2.connect(user="postgres",
-                                    password="phu28240",
-                                    host="127.0.0.1",
+        connection = psycopg2.connect(user="webadmin",
+                                    password="APIsgk43364",
+                                    host="node4994-pp-gold.th.app.ruk-com.cloud",
                                     port="5432",
                                     database="pythonlogin")
         cursor = connection.cursor()
@@ -319,9 +319,9 @@ def usd():
 
 @app.route('/pythonlogin/result')
 def result():
-    connection = psycopg2.connect(user="postgres",
-                                    password="phu28240",
-                                    host="127.0.0.1",
+    connection = psycopg2.connect(user="webadmin",
+                                    password="APIsgk43364",
+                                    host="node4994-pp-gold.th.app.ruk-com.cloud",
                                     port="5432",
                                     database="pythonlogin")
     cur = connection.cursor()
