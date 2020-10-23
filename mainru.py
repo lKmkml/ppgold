@@ -265,11 +265,10 @@ def logout():
 def register():
     msg = ''
 
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'confirm_password' in request.form:
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form :
         
         username = request.form['username']
         password = request.form['password']
-        confirm_password = request.form['confirm_password']
         email = request.form['email']
         connection = psycopg2.connect(user="webadmin",
                                     password="APIsgk43364",
@@ -285,8 +284,6 @@ def register():
             msg = 'Invalid email address!'
         elif not re.match(r'[A-Za-z0-9]+', username):
             msg = 'Username must contain only characters and numbers!'
-        elif password != confirm_password:
-            msg ='Please Enter Confirm Password like Password.'
         elif not username or not password or not email:
             msg = 'Please fill out the form!'
         else:
