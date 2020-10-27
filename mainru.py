@@ -153,6 +153,7 @@ cal1=(month[0]+month[1]+month[2]+month[3]+month[4]+month[5]+month[6]+month[7]+mo
 fortune = '%.2f'%(cal1 - month[-1])
 cal='%.2f' %cal1
 Result = []
+Result1 = []
 if float(fortune) < 0 :
     prop = '.ราคาทองทีโอกาศที่จะลง.'
 elif float(fortune) > 0   :
