@@ -312,7 +312,7 @@ def profile():
 
 @app.route('/pythonlogin/usd')
 def usd():
-    return render_template('usd.html',prophecy=Result1[1],calcu1=cal3,octusd=rateusd[-1],sepusd=rateusd[-2],augusd=rateusd[-3],julusd=rateusd[-4],junusd=rateusd[-5],mayusd=rateusd[-6],aprusd=rateusd[-7],marusd=rateusd[-8],febusd=rateusd[-9],janusd=rateusd[-10]) 
+    return render_template('usd.html',prophecy=Result1,calcu1=cal3,octusd=rateusd[-1],sepusd=rateusd[-2],augusd=rateusd[-3],julusd=rateusd[-4],junusd=rateusd[-5],mayusd=rateusd[-6],aprusd=rateusd[-7],marusd=rateusd[-8],febusd=rateusd[-9],janusd=rateusd[-10]) 
 
 @app.route('/pythonlogin/result')
 def result():
